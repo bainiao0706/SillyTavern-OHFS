@@ -57,7 +57,7 @@ storage_spaces:
 ---
 ```
 
-5.酒馆默认开启了白名单与用户名认证，默认用户密码为下面，也可以自行在dockerfile中修改
+4.酒馆默认开启了白名单与用户名认证，默认用户密码为下面，也可以自行在dockerfile中修改
 ```yaml
 ---
 basicAuthUser:\n\
