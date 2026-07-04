@@ -1,4 +1,4 @@
-#Github@bainiao0706 https://github.com/bainiao0706/-sillytavern-  喜欢的点个stars。
+#Github@bainiao0706 https://github.com/bainiao0706/SillyTavern-OHFS  喜欢的点个stars。
 FROM node:18-alpine
 
 # 安装必要的工具
