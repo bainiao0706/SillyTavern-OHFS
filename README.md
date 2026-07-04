@@ -42,7 +42,7 @@
 ### 🛠️ 前期准备
 1. 拥有一个 [Hugging Face](https://huggingface.co/) 账号（需完成基础的邮箱验证）。
 2. 下载仓库中的**Dockerfile**文件和**config.yaml**文件于本地。
-3. 本地创建一个**READER.md**文件，修改title与storage_spaces位置，根据中文提示修改即可。
+3. 本地创建一个**READER.md**文件，复制下方代码，修改title与storage_spaces，根据中文提示修改完后保存。
 
 ```Markdown
 ---
