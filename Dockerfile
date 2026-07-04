@@ -1,3 +1,4 @@
+#Github@bainiao0706 https://github.com/bainiao0706/-sillytavern-  喜欢的点个stars。
 FROM node:18-alpine
 
 # 安装必要的工具
@@ -20,8 +21,8 @@ listen: true\n\
 whitelistMode: false\n\
 basicAuthMode: true\n\
 basicAuthUser:\n\
-  username: \"用户名\"\n\  
-  password: \"密码\"\n\   
+  username: \"root\"\n\  
+  password: \"admin\"\n\   
 trustProxy: true\n" > config.yaml
 
 # 暴露 7860 端口
@@ -29,3 +30,4 @@ EXPOSE 7860
 
 # 酒馆，启动！
 CMD ["node", "server.js"]
+
