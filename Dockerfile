@@ -1,33 +1,33 @@
-#Github@bainiao0706 https://github.com/bainiao0706/SillyTavern-OHFS  喜欢的点个stars。
+# Github@bainiao0706 https://github.com/bainiao0706/SillyTavern-OHFS Stars appreciated.
 FROM node:18-alpine
 
-# 安装必要的工具
+# Install essential system utilities
 RUN apk add --no-cache git shadow
 
-# 克隆酒馆的代码
-RUN git clone https://github.com/SillyTavern/SillyTavern.git /app
-
+# Set temporary workspace for building dependencies locally
 WORKDIR /app
 
-# 安装依赖
-RUN npm install --only=production
+# Clone production source and install node modules into local container storage (/app)
+RUN git clone https://github.com/SillyTavern/SillyTavern.git /app && \
+    npm install --only=production
 
+# Set standard application runtime environments
 ENV BACKGROUND_COLOR=black
 ENV NODE_ENV=production
 
-# 写入配置，使用时修改用户名和密码
-RUN printf "port: 7860\n\
-listen: true\n\
-whitelistMode: false\n\
-basicAuthMode: true\n\
-basicAuthUser:\n\
-  username: \"root\"\n\  
-  password: \"admin\"\n\   
-trustProxy: true\n" > config.yaml
-
-# 暴露 7860 端口
+# Expose internal service port
 EXPOSE 7860
 
-# 酒馆，启动！
-CMD ["node", "server.js"]
-
+# Runtime pipeline: Clean Storage Init -> Symlink Junction -> Launch
+CMD echo "[INFO] Starting SillyTavern..." && \
+    if [ ! -f /data/server.js ]; then \
+      echo "[INFO] /data is empty. Performing clean clone into persistent storage..." && \
+      git clone https://github.com/SillyTavern/SillyTavern.git /data; \
+    fi && \
+    echo "[INFO] Resolving NFS directory locks and establishing symlinks..." && \
+    if [ -d /data/node_modules ] && [ ! -L /data/node_modules ]; then \
+        mv /data/node_modules /data/.legacy_node_modules_$(date +%s) 2>/dev/null || rm -rf /data/node_modules; \
+    fi && \
+    ln -sf /app/node_modules /data/node_modules && \
+    echo "[INFO] Redirecting workspace environment and launching server..." && \
+    cd /data && DATA_DIR=/data node server.js
