@@ -55,6 +55,7 @@ app_port: 7860
 storage_spaces:
   - /app/data
 ---
+```yaml
 
 ### 📅 详细部署步骤
 1. **创建 Space 空间**：登录 HF 后，点击右上角 `New Space`。
