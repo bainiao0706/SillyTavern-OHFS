@@ -59,8 +59,7 @@ storage_spaces:
 ---
 ```
 
-4.新改进(26.07.04):移除了Dockerfile明文账号密码，改为了跟本地部署酒馆一样于config.yaml中修改，可以在实例部署完成后(running状态),打开挂载桶———找到已经生成的
-config.yaml删除然后上传本仓库中已经修改好的config.yaml文件，上传后打开编辑并修改账号密码，保存后重启实例即可。
+4.新改进(26.07.05):移除了Dockerfile明文账号密码，改为了跟本地部署酒馆一样于config.yaml中修改，可以在实例部署完成后(running状态),打开挂载桶———找到已经生成的 config.yaml删除然后根据GitHub仓库中已经修改好的config.yaml文件修改hf上实例的config.yaml，修改好保存后重启实例。
 
 
 ### 📅 详细部署步骤
