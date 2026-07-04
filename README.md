@@ -12,10 +12,10 @@
 
 这是一个专为想要体验云端酒馆的前辈编写的保姆级教程。
 
-本教程将手把手教您如何利用 **Hugging Face Spaces** 提供的免费 Worker 算力，完美部署属于您自己的 **SillyTavern（酒馆）**。无需本地高级配置，随时随地通过浏览器即可畅玩。
+本教程将教您如何使用 **Hugging Face Spaces** 提供的免费 Worker 算力，部署属于您自己的 **SillyTavern（酒馆）**。无需本地高级配置，随时随地通过浏览器畅玩。
 
 > [!NOTE]
-> 本教程及相关配置文件均针对 Hugging Face 环境进行了深度优化，确保容器持久化与稳定性。
+> 本教程及相关配置文件仅提供部署教程，仅保证可使用不保证稳定性与风险问题。
 
 ---
 
@@ -41,7 +41,20 @@
 
 ### 🛠️ 前期准备
 1. 拥有一个 [Hugging Face](https://huggingface.co/) 账号（需完成基础的邮箱验证）。
-2. 准备好您的酒馆人设图及相关 API 密钥。
+2. 下载仓库中的**Dockerfile**文件于本地。
+3. 本地创建一个**READER.md**文件，并将下方代码复制到其中保存
+
+```yaml
+---
+title: 标题     # 修改为你在 hugging face 创建实例的名字
+emoji: 🎭
+colorFrom: purple
+colorTo: indigo
+sdk: docker
+app_port: 7860
+storage_spaces:
+  - /app/data
+---
 
 ### 📅 详细部署步骤
 1. **创建 Space 空间**：登录 HF 后，点击右上角 `New Space`。
