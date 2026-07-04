@@ -91,6 +91,7 @@ basicAuthUser:\n\
 <img width="2736" height="1543" alt="image" src="https://github.com/user-attachments/assets/b009a570-c243-430b-a845-80f87d53d18a" />
 
 9.部署完成后会出现酒馆的用户密码登录框就是成功啦，复制用户密码提示框上面的链接地址，后面游玩就直接访问那个网址即可。
+
 <img width="585" height="468" alt="image" src="https://github.com/user-attachments/assets/223aadba-f7ab-4848-bb37-39644cc47dcd" />
 
 ---
