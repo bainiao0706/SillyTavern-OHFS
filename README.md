@@ -76,7 +76,7 @@ basicAuthUser:\n\
 3.**Select the Space SDK**:选择**Docker**，**Choose a Docker template**选择**blank**。
 <img width="1172" height="1190" alt="image" src="https://github.com/user-attachments/assets/61eb924d-6be3-4c51-83b5-558ec3aff6e2" />
 
-4.开启**Storage Bucket**，其余内容默认不用管
+4.开启**Storage Bucket**，其余内容默认不用管。
 <img width="1158" height="888" alt="image" src="https://github.com/user-attachments/assets/006bb43f-7f80-4f11-8374-56dace371183" />
 
 5.滑到最下方点击**Create Space**。
@@ -104,7 +104,10 @@ basicAuthUser:\n\
 > **Q.** 为什么访问酒馆初始化这么久？
 > **A.** 初始化慢是正常的。
 > 
-> **Q.** 我下线后重新访问怎么只提示一个抱抱脸啊
+> **Q.** 我下线后重新访问怎么只提示一个抱抱脸啊？
 > **A.** 实例被封掉了，抱抱脸使用规则中有一条是免费worker实例如果悠异常api流量会被检测并封掉，这种时候直接删掉这个实例重新开一个就行了。
+>
+> Q.api连接连不上怎么办？
+> A.由于其为AWS ip容易被ban，使用我建议有动手能力的可以将其流量代理为Cloudflare的。
 
 ---
