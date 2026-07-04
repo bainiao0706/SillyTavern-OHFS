@@ -58,10 +58,20 @@ storage_spaces:
 ```
 
 ### 📅 详细部署步骤
-1. **创建 Space 空间**：登录 HF 后，点击右上角 `New Space`。
-2. **环境选择**：SDK 务必选择 **Docker**，并选择 `Blank` 模板。
-3. **配置导入**：将本仓库的 `Dockerfile` 及相关配置文件上传至您的 Space 仓库中。
-4. **安全加固**：请务必在 Space 的 `Variables and secrets` 中配置您的登录密码（如 `BASIC_AUTH_USER` 和 `BASIC_AUTH_PASS`），防止酒馆被他人冒用。
+1.访问[Hugging Face](https://huggingface.co/spaces)并点击**New Space**。
+<img width="2736" height="1543" alt="image" src="https://github.com/user-attachments/assets/612c7849-ece7-4a13-8cb5-d708ad79c13f" />
+
+2.**Space name**填写你喜欢的，**填写完后在README.md文件中标题部分同步修改**，**Short description**填描述（可随便），**License**选Mit。
+<img width="1448" height="992" alt="image" src="https://github.com/user-attachments/assets/3a251d4c-67d4-4074-9d73-b39151ccd8de" />
+
+3.**Select the Space SDK**:选择**Docker**，**Choose a Docker template**选择**blank**。
+<img width="1172" height="1190" alt="image" src="https://github.com/user-attachments/assets/61eb924d-6be3-4c51-83b5-558ec3aff6e2" />
+
+4.开启**Storage Bucket**，其余内容默认不用管
+<img width="1158" height="888" alt="image" src="https://github.com/user-attachments/assets/006bb43f-7f80-4f11-8374-56dace371183" />
+
+5.滑到最下方点击**Create Space**
+6.创建好后进入Space空间
 
 ---
 
